@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, Fragment } from 'react';
+import SetUpForm from './components/SetUpForm';
+import Header from './components/UI/Header';
+import Instruction from './components/Instruction';
 
 function App() {
+  const [showInstruction, setShowInstruction] = useState();
+
+  const onInstructionHandler=()=>{
+    setShowInstruction(true)
+  }
+
+  const onCloseInstructionHandler = () => {
+    setShowInstruction(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header onInstruction={onInstructionHandler}/>
+      <SetUpForm/>
+      {showInstruction && <Instruction onClose={onCloseInstructionHandler} onClick={onCloseInstructionHandler}/>}
+    </Fragment>
   );
 }
 
