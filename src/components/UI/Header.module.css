@@ -2,27 +2,27 @@
 
 body { 
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Verdana';
 }
 
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 10px 10px;
-}
-
-.header a {
-  color: black;
   text-align: center;
-  text-decoration: none;
-}
 
-.header a.logo {
+}
+.header a {
   font-size: 25px;
   font-weight: bold;
-  text-align: center;
-  padding-left: 650px;
+  color: black;
+  
 }
+/* To remove the underline making the hyperlink look more like a normal logo*/
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 .header_right {
   float: right;

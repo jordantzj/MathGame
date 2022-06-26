@@ -9,10 +9,9 @@ function Header(props) {
     }
     return (
         <Fragment>
-            
             <div>
                 <div className={classes.header}>
-                    <a href={base_url} className={classes.logo}>MATH</a>
+                    <a href={base_url}>MATH</a>
                     <div className={classes.header_right}>
                         <a onClick={onInstructionHandler}><img width={20} height={20} src={logo} alt="Logo" /></a>
                     </div>

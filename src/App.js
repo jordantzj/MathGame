@@ -18,6 +18,7 @@ function App() {
   return (
     <Fragment>
       <Header onInstruction={onInstructionHandler}/>
+      <p></p>
       <SetUpForm/>
       {showInstruction && <Instruction onClose={onCloseInstructionHandler} onClick={onCloseInstructionHandler}/>}
     </Fragment>
